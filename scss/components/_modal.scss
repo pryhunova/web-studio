@@ -1,0 +1,255 @@
+/*разметка модального окна */
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 40px;
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: $primary-background-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  ul {
+    padding: 0;
+  }
+}
+/*призыв к действию в форме */
+.group-title {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+}
+
+/*форма ввода данных */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  height: 40px;
+  padding: 12px 18px 12px 42px;
+  margin-bottom: 28px;
+  transition: border $duration $function;
+
+  color: $primary-title-color;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &:focus ~ .form-icon {
+    fill: $accent-color;
+  }
+}
+.form-field:focus + .form-label,
+.form-field:not(:placeholder-shown) + .form-label {
+  color: $accent-color;
+  left: 16px;
+  transform: translateY(-38px);
+}
+
+/*позиционированние лейбла */
+.form-row {
+  position: relative;
+  display: block;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  width: 448px;
+  transition: $duration $function;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+
+/*иконки возле лейбла */
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: $duration $function;
+  margin-right: 10px;
+
+  fill: $primary-title-color;
+}
+
+/* поле для комментариев */
+textarea {
+  resize: none;
+}
+.form-comment {
+  display: inline-block;
+  flex-direction: column;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px 12px 16px;
+  margin-bottom: 20px;
+
+  color: $primary-title-color;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+.comment {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transform: translateY(-0%);
+  width: 448px;
+  margin-bottom: 20px;
+  transition: $duration $function;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+.form-comment:focus + .comment,
+.form-comment:not(:placeholder-shown) + .comment {
+  color: $accent-color;
+  left: 16px;
+  transform: translateY(-33px);
+}
+/*соглашение с условиями */
+.form-offer {
+  color: $accent-color;
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+/*скрываем чекбокс с помощью autoprefixer*/
+.checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+
+  border: 2px solid $primary-title-color;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .icon-checkbox {
+  background-image: url('../images/icons/icon-check-on.svg');
+  background-size: contain;
+  background-color: $accent-color;
+  background-origin: border-box;
+  border-color: $accent-color;
+}
+
+/*кнопка отправки */
+.form-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+  min-width: 200px;
+  justify-content: center;
+
+  color: $hero-white-color;
+  background-color: $accent-color;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Иконка закрытия модалки */
+.icon-close {
+  display: block;
+}
+
+.form-icon-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 9px;
+  transition: fill $duration $function;
+
+  fill: $primary-title-color;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  cursor: pointer;
+  background-color: $primary-background-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  &:focus + icon-close,
+  &:hover + icon-close {
+    fill: $accent-color;
+  }
+}
+
+/* скрывает модальное окно */
+.backdrop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,53 @@
+/* секция клиенты */
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-img a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border $duration $function;
+
+  width: 175px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  &:hover .clients-icon,
+  &:focus .clients-icon {
+    fill: $accent-color;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.section-clients .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* клиенты - заголовок */
+.section-clients .clients-title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+}
+.clients-icon {
+  fill: #afb1b8;
+  transition: fill $duration $function;
+}
+/* размеры и отступы */
+.clients-list .item {
+  width: calc((100% - 30px * 4) / 5);
+  margin-right: 30px;
+}
+.clients-list .item:last-child {
+  margin-right: 0;
+}

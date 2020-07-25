@@ -1,0 +1,20 @@
+.logo {
+  display: block;
+  transition: color $duration $function;
+
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.logo-accent {
+  color: $accent-color;
+}

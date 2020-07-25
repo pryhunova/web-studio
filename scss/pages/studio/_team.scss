@@ -1,0 +1,103 @@
+/* секция команда */
+
+.section-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $section-background-color;
+
+  .team-title {
+    margin-bottom: 50px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+}
+
+.team-list {
+  display: flex;
+
+  .item {
+    width: 270px;
+    height: 422px;
+    text-align: center;
+
+    background-color: $primary-background-color;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+  }
+}
+.team-name {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.team-aside {
+  margin-bottom: 16px;
+  color: $secondary-text-color;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+}
+
+.team-content {
+  padding: 30px 32px 24px 32px;
+}
+/* соцсети команды */
+.team-social {
+  display: flex;
+  justify-content: center;
+}
+.team-icons {
+  width: calc((100% - 30px) / 4);
+  margin-right: 10px;
+}
+.team-icons:last-child {
+  margin-right: 0;
+}
+
+.team-icons a {
+  display: flex;
+  padding: 12px;
+  transition: background-color $duration $function;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+
+    &:hover .social-icon,
+    &:focus .social-icon {
+      fill: #ffffff;
+    }
+  }
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill $duration $function;
+}
+
+/* отступы */
+.team-list .item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+.team-list .item:last-child {
+  margin-right: 0;
+}

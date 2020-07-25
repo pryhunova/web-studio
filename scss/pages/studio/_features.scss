@@ -1,0 +1,61 @@
+/* секция преимущества */
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .features-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.features-list {
+  display: flex;
+}
+.features-list .item + .item {
+  margin-left: 30px;
+}
+
+/* скрытый заголовок секции - изменить способ */
+.features-title-hidden {
+  display: none;
+}
+/* описание под заголовком */
+.features .features-text {
+  color: $secondary-text-color;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+/* позиционирование картинок */
+.features-list .item::before {
+  display: block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  background-color: $section-background-color;
+}
+.icon-vector::before {
+  background-image: url('../images/icons/Vector.svg');
+}
+.icon-vector1::before {
+  background-image: url('../images/icons/Vector1.svg');
+}
+.icon-vector2::before {
+  background-image: url('../images/icons/Vector2.svg');
+}
+.icon-vector3::before {
+  background-image: url('../images/icons/Vector3.svg');
+}
