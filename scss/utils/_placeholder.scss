@@ -1,0 +1,22 @@
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%padding-tb {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%font-small {
+  font-size: 14px;
+  line-height: 16px;
+}
+%font-big {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+}
