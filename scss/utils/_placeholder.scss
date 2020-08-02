@@ -1,3 +1,5 @@
+/* @extend*/
+
 %flex-center {
   display: flex;
   justify-content: center;
@@ -7,6 +9,11 @@
 %padding-tb {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+%padding-tb-mb {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 %font-small {
@@ -19,4 +26,16 @@
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.03em;
+}
+%font-big-mb {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 0.03em;
+}
+%is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }

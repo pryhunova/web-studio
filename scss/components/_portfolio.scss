@@ -1,11 +1,20 @@
 /* портфолио контейнер */
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 /* секция портфолио */
 .portfolio-gallery .container {
-  @extend %padding-tb;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 /* скрытый заголовок портфолио */
 .portfolio-title-hidden {
@@ -21,9 +30,11 @@
 
 /* кнопки-фильтр */
 .btn {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
 
   .portfolio-button {
     padding: 6px 22px 6px 22px;
@@ -53,23 +64,37 @@
   }
 }
 
-.btn-item {
-  margin-left: 8px;
-}
-.btn-item:first-child {
-  margin-left: 0;
+@media screen and (min-width: 1200px) {
+  .btn-item {
+    margin-left: 8px;
+  }
+  .btn-item:first-child {
+    margin-left: 0;
+  }
 }
 
-/* сетка в портфолио  margin-right: 30px; */
-.portfolio .item {
-  width: calc((100% - 30px * 2) / 3);
-  margin-right: 30px;
+/* сетка в портфолио */
+@media screen and (max-width: 767px) {
+  .portfolio .item {
+    margin-bottom: 30px;
+    width: 450px;
+  }
+  .portfolio .item:last-child {
+    margin-bottom: 0;
+  }
 }
-.portfolio .item:nth-child(3n) {
-  margin-right: 0;
-}
-.portfolio .item:nth-child(-n + 6) {
-  margin-bottom: 30px;
+
+@media screen and (min-width: 1200px) {
+  .portfolio .item {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+  }
+  .portfolio .item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolio .item:nth-child(-n + 6) {
+    margin-bottom: 30px;
+  }
 }
 .portfolio-content {
   padding: 20px 24px 20px 24px;
@@ -78,7 +103,7 @@
   border-left: 1px solid #eeeeee;
 }
 
-/* заголовки в сетке портфолио */
+/* заголовки в портфолио */
 .portfolio-title {
   margin-bottom: 4px;
   font-style: normal;
@@ -99,7 +124,7 @@
   color: $secondary-text-color;
 }
 
-/* текст */
+/* текст за кадром */
 .portfolio-img {
   position: relative;
   overflow: hidden;
