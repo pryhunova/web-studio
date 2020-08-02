@@ -35,7 +35,12 @@
   letter-spacing: 0.03em;
 }
 %is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -7,48 +8,35 @@
   border-bottom: 1px solid #ececec;
   background-color: $primary-background-color;
 
+  @media screen and (max-width: 767px) {
+    padding: 16px 0 16px 15px;
+  }
+
   @media screen and (min-width: 768px) {
     min-height: 80px;
   }
 }
-/* контейнер навигации */
-.site-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
+/* контейнер выпадающего меню */
+.menu-container {
+  background-color: $header-background-color;
+  &.is-open {
+    display: block;
+  }
   @media screen and (max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    border-top: 1px solid #ececec;
   }
   @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
-  @media screen and (min-width: 1200px) {
     display: flex;
-    margin-left: 85px;
-    margin-right: 305px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .site-nav .item {
-    margin-bottom: 40px;
-  }
-  .site-nav .item:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav .item {
-    margin-right: 50px;
-  }
-  .site-nav .item:last-child {
-    margin-right: 0;
-  }
-}
 .main-nav {
   align-items: center;
 
@@ -58,8 +46,11 @@
 }
 
 /* выпадающее меню - кнопка */
-
 .menu-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -97,7 +88,8 @@
   color: $button-white-text;
   background-color: $accent-color;
 }
-/* категории */
+
+/* категории меню */
 .site-nav .link {
   position: relative;
   transition: color $duration $function;
@@ -153,6 +145,46 @@
   transform: scaleX(1);
 }
 
+/*меню*/
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 85px;
+    margin-right: 305px;
+  }
+}
+
+/*отступы между категориями */
+@media screen and (max-width: 767px) {
+  .site-nav .item {
+    margin-bottom: 40px;
+  }
+  .site-nav .item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav .item {
+    margin-right: 50px;
+  }
+  .site-nav .item:last-child {
+    margin-right: 0;
+  }
+}
+
 /* контакты в шапке */
 .contacts-header {
   text-align: center;
@@ -176,10 +208,14 @@
 
     @media screen and (min-width: 768px) {
       display: flex;
+
       font-size: 12px;
       line-height: 14px;
     }
     @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+
       font-size: 14px;
       line-height: 1.15;
     }

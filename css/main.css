@@ -26,6 +26,17 @@
   letter-spacing: 0.03em;
 }
 
+.features-title-hidden, .portfolio-title-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 *,
 ::after,
@@ -237,6 +248,7 @@ p {
 }
 
 .header {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -245,70 +257,43 @@ p {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 16px 0 16px 15px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header {
     min-height: 80px;
   }
 }
 
-/* контейнер навигации */
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+/* контейнер выпадающего меню */
+.menu-container {
+  background-color: #ffffff;
+}
+
+.menu-container.is-open {
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
-  .site-nav {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ececec;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav {
+  .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 85px;
-    margin-right: 305px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav .item {
-    margin-bottom: 40px;
-  }
-  .site-nav .item:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav .item {
-    margin-right: 50px;
-  }
-  .site-nav .item:last-child {
-    margin-right: 0;
   }
 }
 
@@ -328,6 +313,9 @@ p {
 
 /* выпадающее меню - кнопка */
 .menu-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -372,7 +360,7 @@ p {
   background-color: #2196f3;
 }
 
-/* категории */
+/* категории меню */
 .site-nav .link {
   position: relative;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -435,6 +423,68 @@ p {
           transform: scaleX(1);
 }
 
+/*меню*/
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 85px;
+    margin-right: 305px;
+  }
+}
+
+/*отступы между категориями */
+@media screen and (max-width: 767px) {
+  .site-nav .item {
+    margin-bottom: 40px;
+  }
+  .site-nav .item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav .item {
+    margin-right: 50px;
+  }
+  .site-nav .item:last-child {
+    margin-right: 0;
+  }
+}
+
 /* контакты в шапке */
 .contacts-header {
   text-align: center;
@@ -471,6 +521,8 @@ p {
 
 @media screen and (min-width: 1200px) {
   .contacts-header a {
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.15;
   }
@@ -939,11 +991,7 @@ textarea {
   }
 }
 
-/* скрытый заголовок секции - изменить способ */
-.features-title-hidden {
-  display: none;
-}
-
+/* скрытый заголовок секции */
 /* описание под заголовком */
 .features .features-text {
   color: #757575;
@@ -1606,17 +1654,6 @@ textarea {
 }
 
 /* скрытый заголовок портфолио */
-.portfolio-title-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 /* кнопки-фильтр */
 @media screen and (min-width: 1200px) {
   .btn {
@@ -1669,7 +1706,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .portfolio .item {
     margin-bottom: 30px;
-    width: 450px;
+    width: 100%;
   }
   .portfolio .item:last-child {
     margin-bottom: 0;

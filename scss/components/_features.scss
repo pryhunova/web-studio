@@ -27,9 +27,9 @@
   }
 }
 
-/* скрытый заголовок секции - изменить способ */
+/* скрытый заголовок секции */
 .features-title-hidden {
-  display: none;
+  @extend %is-hidden;
 }
 /* описание под заголовком */
 .features .features-text {
