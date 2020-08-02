@@ -22,6 +22,7 @@
   background-color: $header-background-color;
   &.is-open {
     display: block;
+    z-index: 1;
   }
   @media screen and (max-width: 767px) {
     display: none;
