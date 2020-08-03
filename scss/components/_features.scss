@@ -19,6 +19,12 @@
 }
 
 .features-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
   .item {
     @media screen and (min-width: 768px) {
       width: 354px;
@@ -29,12 +35,6 @@
     @media screen and (min-width: 1200px) {
       width: 270px;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
   }
 }
 

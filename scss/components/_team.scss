@@ -22,11 +22,11 @@
 .team-list {
   @media screen and (min-width: 768px) {
     display: flex;
+    margin: -15px;
   }
 
   @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
-    margin: -15px;
   }
 
   .item {
@@ -39,6 +39,7 @@
       0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 0px 0px 4px 4px;
 
+    /* отступы */
     @media screen and (min-width: 768px) {
       width: 354px;
       height: 422px;
@@ -52,24 +53,15 @@
       height: 422px;
     }
   }
-  @media screen and (max-width: 767px) {
-    .item {
-      margin-bottom: 30px;
-    }
-
-    .item:last-child {
-      margin-bottom: 0;
-    }
-  }
 }
-/* отступы */
-@media screen and (min-width: 1200px) {
+
+/* отступы mobile */
+@media screen and (max-width: 767px) {
   .team-list .item {
-    width: calc((100% - 90px) / 4);
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
-  .team-list .item:last-child {
-    margin-right: 0;
+  .item:last-child {
+    margin-bottom: 0;
   }
 }
 

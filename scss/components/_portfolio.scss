@@ -83,7 +83,7 @@
   }
 }
 
-/* сетка в портфолио */
+/* отступы в портфолио */
 .portfolio .item {
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
@@ -109,18 +109,6 @@
   }
 }
 
-// @media screen and (min-width: 1200px) {
-//   .portfolio .item {
-//     width: calc((100% - 30px * 2) / 3);
-//     margin-right: 30px;
-//   }
-//   .portfolio .item:nth-child(3n) {
-//     margin-right: 0;
-//   }
-//   .portfolio .item:nth-child(-n + 6) {
-//     margin-bottom: 30px;
-//   }
-// }
 .portfolio-content {
   padding: 20px 24px 20px 24px;
   border-right: 1px solid #eeeeee;
