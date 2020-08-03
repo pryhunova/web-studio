@@ -18,12 +18,23 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .features-list {
-    display: flex;
+.features-list {
+  .item {
+    @media screen and (min-width: 768px) {
+      width: 354px;
+
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
-  .features-list .item + .item {
-    margin-left: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
@@ -39,6 +50,7 @@
   line-height: 24px;
   letter-spacing: 0.03em;
 }
+
 /* позиционирование картинок */
 .features-list .item::before {
   display: block;
