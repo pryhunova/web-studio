@@ -6,18 +6,27 @@
 
   .button {
     display: flex;
+
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .container {
     justify-content: center;
 
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
     @media screen and (min-width: 768px) {
       display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
       max-height: 252px;
       max-width: 1600px;
     }
-  }
-  @media screen and (max-width: 767px) {
-    text-align: center;
   }
 }
 
@@ -34,8 +43,17 @@
 
 /*контейнер adress-item */
 .adress-item {
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 69px;
+    margin-bottom: 0;
+    text-align: inherit;
   }
   .logo {
     margin-bottom: 20px;
@@ -86,12 +104,22 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
+  }
 
-    text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: inherit;
   }
 }
 
 /* футер соцсети */
+.social-list {
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: inherit;
+  }
+}
+
 .label {
   display: flex;
 
@@ -152,6 +180,14 @@
 }
 
 /*контейнер подписки */
+
+.newsletter-list {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: inherit;
+  }
+}
+
 .newsletter-list {
   .button::after {
     content: '';
@@ -167,13 +203,13 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    text-align: inherit;
   }
 }
 
@@ -210,7 +246,12 @@
     margin-bottom: 20px;
   }
 
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
   @media screen and (min-width: 1200px) {
     width: 358px;
+    margin-bottom: 0;
   }
 }

@@ -1483,10 +1483,23 @@ textarea {
   display: flex;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer .button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .footer .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .container {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1494,14 +1507,17 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-height: 252px;
-    max-width: 1600px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .footer {
-    text-align: center;
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-height: 252px;
+    max-width: 1600px;
   }
 }
 
@@ -1517,9 +1533,22 @@ textarea {
 }
 
 /*контейнер adress-item */
+.adress-item {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .adress-item {
+    margin-right: 165px;
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .adress-item {
     margin-right: 69px;
+    margin-bottom: 0;
+    text-align: inherit;
   }
 }
 
@@ -1582,11 +1611,26 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
-    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-footer {
+    text-align: inherit;
   }
 }
 
 /* футер соцсети */
+.social-list {
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-list {
+    text-align: inherit;
+  }
+}
+
 .label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1654,6 +1698,16 @@ textarea {
 }
 
 /*контейнер подписки */
+.newsletter-list {
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter-list {
+    text-align: inherit;
+  }
+}
+
 .newsletter-list .button::after {
   content: '';
   width: 24px;
@@ -1672,19 +1726,19 @@ textarea {
           align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
+  .newsletter-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .newsletter-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .newsletter-container {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    text-align: inherit;
   }
 }
 
@@ -1729,9 +1783,17 @@ textarea {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .email {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .email {
     width: 358px;
+    margin-bottom: 0;
   }
 }
 
