@@ -85,10 +85,9 @@
 }
 
 .team-content {
-  @media screen and (max-width: 767px) {
-    padding-top: 30px;
-    padding-bottom: 24px;
-  }
+  padding-top: 30px;
+  padding-bottom: 24px;
+
   @media screen and (min-width: 1200px) {
     padding: 30px 32px 24px 32px;
   }

@@ -235,6 +235,7 @@
           <ul class="activity-list list">
             <li class="item">
               <img
+                srcset="./images/box/box.jpg 1x, ./images/box/box@2x.jpg 2x"
                 src="./images/box/box.jpg"
                 alt="Десктопные приложения"
                 width="370"
@@ -244,6 +245,7 @@
             </li>
             <li class="item">
               <img
+                srcset="./images/box/box2.jpg 1x, ./images/box/box2@2x.jpg 2x"
                 src="./images/box/box2.jpg"
                 alt="Мобильные приложения"
                 width="370"
@@ -252,6 +254,7 @@
             </li>
             <li class="item">
               <img
+                srcset="./images/box/box3.jpg 1x, ./images/box/box3@2x.jpg 2x"
                 src="./images/box/box3.jpg"
                 alt="Дизайнерские решения"
                 width="370"
@@ -268,11 +271,37 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="item">
-              <img
-                src="./images/team/team.jpg"
-                alt="Николай Кучеренко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                ./images/team/team_desk.jpg    270w,
+                ./images/team/team_desk@2x.jpg 2x
+              "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+
+                <source
+                  srcset="
+                  ./images/team/team_tab.jpg    354w,
+                  ./images/team/team_tab@2x.jpg 2x
+                "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+                ./images/team/team_mob.jpg    450w,
+                ./images/team/team_mob@2x.jpg 2x
+               "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <img
+                  src="./images/team/team_desk.jpg"
+                  alt="Николай Кучеренко"
+                />
+              </picture>
               <div class="team-content">
                 <h3 class="team-name">Николай Кучеренко</h3>
                 <p lang="en" class="team-aside">Product Designer</p>
@@ -310,12 +339,37 @@
                 </ul>
               </div>
             </li>
+
             <li class="item">
-              <img
-                src="./images/team/team2.jpg"
-                alt="Ольга Иванова"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                  ./images/team/team2_desk.jpg    270w,
+                  ./images/team/team2_desk@2x.jpg 2x
+                "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/team2_tab.jpg    354w,
+                    ./images/team/team2_tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+                  ./images/team/team2_mob.jpg    450w,
+                  ./images/team/team2_mob@2x.jpg 2x
+                 "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+
+                <img src="./images/team/team2_desk.jpg" alt="Ольга Иванова" />
+              </picture>
               <div class="team-content">
                 <h3 class="team-name">Ольга Иванова</h3>
                 <p lang="en" class="team-aside">Frontend Developer</p>
@@ -353,12 +407,35 @@
                 </ul>
               </div>
             </li>
+
             <li class="item">
-              <img
-                src="./images/team/team3.jpg"
-                alt="Андрей Шевченко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team3_desk.jpg    270w,
+                    ./images/team/team3_desk@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                      ./images/team/team3_tab.jpg    354w,
+                      ./images/team/team3_tab@2x.jpg 2x
+                    "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+                    ./images/team/team3_mob.jpg    450w,
+                    ./images/team/team3_mob@2x.jpg 2x
+                    "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <img src="./images/team/team3_desk.jpg" alt="Андрей Шевченко" />
+              </picture>
               <div class="team-content">
                 <h3 class="team-name">Андрей Шевченко</h3>
                 <p lang="en" class="team-aside">Marketing</p>
@@ -396,12 +473,36 @@
                 </ul>
               </div>
             </li>
+
             <li class="item">
-              <img
-                src="./images/team/team4.jpg"
-                alt="Иван Николаев"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+              ./images/team/team4_desk.jpg    270w,
+              ./images/team/team4_desk@2x.jpg 2x
+            "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+
+                <source
+                  srcset="
+                ./images/team/team4_tab.jpg    354w,
+                ./images/team/team4_tab@2x.jpg 2x
+              "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+              ./images/team/team4_mob.jpg    450w,
+              ./images/team/team4_mob@2x.jpg 2x
+             "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <img src="./images/team/team4_desk.jpg" alt="Иван Николаев" />
+              </picture>
               <div class="team-content">
                 <h3 class="team-name">Иван Николаев</h3>
                 <p lang="en" class="team-aside">UI Designer</p>
