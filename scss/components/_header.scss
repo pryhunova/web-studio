@@ -9,7 +9,7 @@
   background-color: $primary-background-color;
 
   @media screen and (max-width: 767px) {
-    padding: 16px 0 16px 15px;
+    padding: 16px 23px 16px 15px;
   }
 
   @media screen and (min-width: 768px) {
@@ -39,18 +39,22 @@
 }
 
 .main-nav {
+  display: flex;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+    justify-content: baseline;
+
+    width: 100%;
   }
 }
 
 /* выпадающее меню - кнопка */
 .menu-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
 
   display: inline-flex;
   margin: 0;
