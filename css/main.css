@@ -299,15 +299,8 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 60px;
   border-bottom: 1px solid #ececec;
   background-color: #ffffff;
-}
-
-@media screen and (max-width: 767px) {
-  .header {
-    padding: 16px 23px 16px 15px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -359,10 +352,8 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
     width: 100%;
+    min-height: 60px;
   }
 }
 
